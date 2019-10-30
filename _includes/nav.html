@@ -7,13 +7,13 @@
 <header class="site-header">
   <div class="container">
       <h1 class="logo">
-        <a href="{{ "/" | absolute_url }}">{{ site.name }}</a>
+        <a href="{{ "/" | relative_url }}">{{ site.name }}</a>
       </h1>
       <nav class="main-nav">
         <ul class="navigation">
           {% for item in site.data.menus.header %}
           <li>
-            <a href="{{ item.url }}" | absolute_url }}>
+            <a href="{{ item.url }}" | relative_url }}>
               {{ item.title}}
             </a>
           </li>
