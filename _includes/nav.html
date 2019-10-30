@@ -13,7 +13,7 @@
         <ul class="navigation">
           {% for item in site.data.menus.header %}
           <li>
-            <a href="{{ item.url }}">
+            <a href="{{ item.url }}" | absolute_url }}>
               {{ item.title}}
             </a>
           </li>
