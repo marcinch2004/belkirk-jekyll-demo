@@ -13,7 +13,7 @@
         <ul class="navigation">
           {% for item in site.data.menus.header %}
           <li>
-            <a href="{{ site.url }}{{ item.url }}" | relative_url }}>
+            <a href="{{ base.url }}{{ item.url }}" | relative_url }}>
               {{ item.title}}
             </a>
           </li>
