@@ -21,12 +21,12 @@
                 <ul class="second-level">
                   {% for child in child.children %}
                   <li>
-                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+                    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
                   </li>
                   {% endfor %}
                 </ul>
                 {% endif %}
-                <a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>
+                <a href="{{ child.url | relative_url }}"{% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
                   {% if child.childen %}
                     <i class='icon-right-dir-2'></i>
