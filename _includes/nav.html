@@ -11,8 +11,14 @@
       </h1>
       <nav class="main-nav">
         <ul class="navigation">
-          {% for link in site.menus.navigation %}
-          <li class="{% if link.children %}nested {% endif %}{% if url == link.url %}current{% endif %}">
+          {% for item in site.data.menus.header %}
+          <li>
+            <a href="{{ item.url }}">
+              {{ item.title}}
+            </a>
+          </li>
+
+          <!-- <li class="{% if link.children %}nested {% endif %}{% if url == link.url %}current{% endif %}">
             {% if link.children %}
             <ul class="first-level">
               {% for child in link.children %}
@@ -32,8 +38,8 @@
                     <i class='icon-right-dir-2'></i>
                   {% endif %}
                 </a>
-              </li>
-              {% endfor %}
+              </li> -->
+              <!-- {% endfor %}
             </ul>
             {% endif %}
             <a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>
@@ -42,7 +48,7 @@
                     <i class='icon-chevron-down'></i>
                   {% endif %}
                 </a>
-          </li>
+          </li> -->
           {% endfor %}
         </ul>
     </nav>
